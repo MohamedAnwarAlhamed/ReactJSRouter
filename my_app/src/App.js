@@ -4,11 +4,12 @@ import { HOME } from './components/Home';
 import { ABOUT } from './components/About';
 import { CONTACT } from './components/Contact';
 import { HEADER } from './components/Header';
-
+import { NavBar } from './components/NavBar';
 
 function App() {
   return (
       <Router>
+        <NavBar />
         <Routes>
           <Route path="/" element={<><HOME /><HEADER/></>} />
           <Route path="/about" element={<ABOUT />} />
