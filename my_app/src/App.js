@@ -7,8 +7,11 @@ import { HEADER } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ORDER_SUMMARY } from './components/OrderSummary';
 import { PRODUCTS } from './components/Products';
-import { FEATURE } from './components/Feature';
+import { FEATURE } from './components/Features';
 import { NEW } from './components/New';
+import { Users } from './components/Users';
+import { UserDetails } from './components/UserDetails';
+import { AdminDetails } from './components/AdminDetails';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
              <Route path="/feature" element={<FEATURE />} />
               <Route path="/new" element={<NEW />} />
           </Route>
+          <Route path="/user" element={<Users />} />
+          <Route path="/user/:userId" element={<UserDetails />} />
+          <Route path="/user/admin" element={<AdminDetails/>} />
         </Routes>
       </Router>
   );
