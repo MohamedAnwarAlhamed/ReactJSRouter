@@ -5,6 +5,7 @@ import { ABOUT } from './components/About';
 import { CONTACT } from './components/Contact';
 import { HEADER } from './components/Header';
 import { NavBar } from './components/NavBar';
+import { ORDER_SUMMARY } from './components/OrderSummary';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<ABOUT />} />
           <Route path="/contact" element={<CONTACT />} />
           <Route path="*" element={<h1>NO FOUND</h1>} />
+          <Route path="/order-summary" element={<ORDER_SUMMARY />} />
         </Routes>
       </Router>
   );
