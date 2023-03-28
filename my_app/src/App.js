@@ -1,7 +1,9 @@
 import './App.css'
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HOME } from './components/Home'
-import { ABOUT } from './components/About'
+// import { ABOUT } from './components/About'
+const LazyLoading = React.lazy(() => import('./components/About'))
 import { CONTACT } from './components/Contact'
 import { HEADER } from './components/Header'
 import { NavBar } from './components/NavBar'
@@ -27,7 +29,14 @@ function App() {
             </>
           }
         />
-        <Route path="/about" element={<ABOUT />} />
+        <Route
+          path="/about"
+          element={
+            <React.Suspense fallback="Loading.....">
+              <LazyLoading />
+            </React.Suspense>
+          }
+        />
         <Route path="/contact" element={<CONTACT />} />
         <Route path="*" element={<h1>NO FOUND</h1>} />
         <Route path="/order-summary" element={<ORDER_SUMMARY />} />
