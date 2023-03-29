@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const New = () => {
+const New = () => {
   return (
     <div>New</div>
   )
