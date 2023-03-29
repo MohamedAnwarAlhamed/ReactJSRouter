@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-export const PRODUCTS = () => {
+const Products = () => {
   return (
     <>
       <div>Products</div>
@@ -14,3 +14,6 @@ export const PRODUCTS = () => {
     </>
   )
 }
+
+export default Products
+

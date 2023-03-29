@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export const HOME = () => {
+const Home = () => {
   const navigate = useNavigate()
   return (
     <>
@@ -10,3 +10,5 @@ export const HOME = () => {
     </>
   )
 }
+
+export default Home

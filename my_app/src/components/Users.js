@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet, useSearchParams } from 'react-router-dom'
 
-export const Users = () => {
+const Users = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const filter = searchParams.get('filter') === 'Active'
   return (
@@ -17,3 +17,5 @@ export const Users = () => {
     </div>
   )
 }
+
+export default Users
